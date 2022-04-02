@@ -1,6 +1,12 @@
 <?php
+// my home page controller
 use App\Http\Controllers\AichaController;
+
+// additional files.
 use Illuminate\Support\Facades\Route;
+
+// the admin panel controller
+use App\Http\Controllers\AdminPanel\AichaController as Aicha;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,9 +19,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//Route::get('/', function () {
-//    return view('welcome');
-//});
+
 
 Route::middleware([
     'auth:sanctum',
@@ -30,3 +34,9 @@ Route::middleware([
 // this is my home controller.....
 
 Route::get('/', [AichaController::class, 'index'])->name('home');
+
+// this is my admin panel.....
+
+Route::get('/aicha', [Aicha::class, 'index'])->name('home');
+
+
