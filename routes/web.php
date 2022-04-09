@@ -37,6 +37,16 @@ Route::get('/', [AichaController::class, 'index'])->name('home');
 
 // this is my admin panel.....
 
-Route::get('/aicha', [Aicha::class, 'index'])->name('home');
+Route::get('/admin', [Aicha::class, 'index'])->name('home');
+
+// this is my adminPanelCategory controller category.....
+Route::get('/admin/category', [\App\Http\Controllers\AdminPanel\CategoryController::class, 'index'])->name('category');
+// this is my adminPanelCategory controller create.....
+Route::get('/admin/category', [\App\Http\Controllers\AdminPanel\CategoryController::class, 'creat'])->name('create');
+// this is my adminPanelCategory controller store.....
+Route::get('/admin/category', [\App\Http\Controllers\AdminPanel\CategoryController::class, 'store'])->name('store');
+// this is my adminPanelCategory controller edit.....
+Route::get('/admin/category', [\App\Http\Controllers\AdminPanel\CategoryController::class, 'edit'])->name('edit');
+
 
 

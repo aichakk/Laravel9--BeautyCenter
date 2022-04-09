@@ -12,6 +12,7 @@
 @section('content')
     <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
         @include('homeAdminP.header')
+
         <div class="container-fluid py-4">
             <div class="row">
                 <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
@@ -567,5 +568,5 @@
         </div>
     </main>
 @endsection
-
+@include('homeAdminP.fixed-plugins')
 
