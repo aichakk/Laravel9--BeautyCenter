@@ -8,7 +8,7 @@ class mincontroller extends Controller
 {
     public function minimum()
     {
-        return view('category.aichahtml');
+       return view('category.aichahtml');
     }
 
 }
