@@ -37,16 +37,31 @@ Route::get('/', [AichaController::class, 'index'])->name('home');
 
 // this is my admin panel.....
 
-Route::get('/admin', [Aicha::class, 'index'])->name('home');
+Route::get('/admin', [Aicha::class, 'index'])->name('adminPanel');
 
 // this is my adminPanelCategory controller category.....
 Route::get('/admin/category', [\App\Http\Controllers\AdminPanel\CategoryController::class, 'index'])->name('category');
+
 // this is my adminPanelCategory controller create.....
-Route::get('/admin/category', [\App\Http\Controllers\AdminPanel\CategoryController::class, 'creat'])->name('create');
+Route::get('/admin/category/create', [\App\Http\Controllers\AdminPanel\CategoryController::class, 'create'])->name('create');
+
 // this is my adminPanelCategory controller store.....
-Route::get('/admin/category', [\App\Http\Controllers\AdminPanel\CategoryController::class, 'store'])->name('store');
+Route::post('/admin/category/store', [\App\Http\Controllers\AdminPanel\CategoryController::class, 'store'])->name('store');
+
 // this is my adminPanelCategory controller edit.....
-Route::get('/admin/category', [\App\Http\Controllers\AdminPanel\CategoryController::class, 'edit'])->name('edit');
+Route::get('/admin/category/edit', [\App\Http\Controllers\AdminPanel\CategoryController::class, 'edit'])->name('edit');
+
+// this is my adminPanelCategory controller delete.....
+Route::get('/admin/category/delete', [\App\Http\Controllers\AdminPanel\CategoryController::class, 'delete'])->name('edit');
+
+// this is my adminPanelCategory controller show.....
+Route::get('/admin/category/show', [\App\Http\Controllers\AdminPanel\CategoryController::class, 'show'])->name('edit');
+
+//this is aichahtmlcontroller
+Route::get('/Ndiaye', [\App\Http\Controllers\mincontroller::class, 'minimum'])->name('edit');
+
+
+
 
 
 

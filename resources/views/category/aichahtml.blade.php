@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Atomic Habits</title>
+</head>
+<body>
+
+<h1>From small to big changes</h1><br>
+<h2>Came and work with us</h2><br>
+<p> in life nothing is impossible when you want you can so just believe in yourself</p><br>
+</body>
+</html>
+

@@ -15,7 +15,10 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        echo "it iw working";
+        $data = Category::all();
+        return view('category.index', [
+            'data' => $data
+        ]);
     }
 
     /**
@@ -25,7 +28,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        //
+        return view('category.create');
     }
 
     /**
@@ -36,7 +39,16 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = new Category();
+
+        $data->parent_id = 0;
+        $data->price = $request->price;
+        $data->discription = $request->description;
+        $data->image = $request->image;
+        $data->type = $request->type;
+        $data->save();
+        return redirect('admin/category');
+
     }
 
     /**
