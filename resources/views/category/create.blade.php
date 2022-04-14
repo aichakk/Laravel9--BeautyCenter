@@ -2,6 +2,10 @@
 
 @section('title', 'ServicesList')
 
+@section('sidebar')
+    @@parent
+
+@stop
 
 
 @section('content')

@@ -2,10 +2,7 @@
 
 @section('title', 'BeautyCenter')
 
-@section('sidebar')
-    @@parent
 
-    <p>This is appended to the master sidebar.</p>
 
 @stop
 
@@ -566,6 +563,7 @@
             @include('homeAdminP.footer')
         </div>
     </main>
+
 @endsection
 
 
