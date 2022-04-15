@@ -25,7 +25,7 @@
                                     <span class="font-weight-bold ms-1">Our Best </span>Beauty services available
                                 </p>
                             </div>
-                            <form action="/admin/category/store" method="post">
+                            <form action="/admin/category/store" method="post" enctype="multipart/form-data">
                                 @csrf
                                 <div class="input-group input-group-outline my-3">
                                     <label class="form-label">Service-Price</label>

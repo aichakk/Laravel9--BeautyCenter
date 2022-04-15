@@ -38,34 +38,36 @@ Route::middleware([
 Route::get('/', [AichaController::class, 'index'])->name('home');
 
 // this is my admin panel grouped with sub:cat function.....
-Route::prefix('admin')->group(function () {
 
 
-    Route::get('/', [Aicha::class, 'index'])->name('admin');
+// this is my admin panel grouped with sub:cat function.....
+Route::prefix('admin')->name('admin.')->group(function () {
 
-    // this is my admin panel grouped with sub:cat function.....
-    Route::prefix('category')->group(function () {
+    Route::get('/', [Aicha::class, 'index'])->name('index');
+
+
+    Route::prefix('category')->name('category.')->controller(AichaCategory::class)->group(function () {
 
         // this is my adminPanelCategory controller category.....
-        Route::get('/', [AichaCategory::class, 'index'])->name('admin_category');
+        Route::get('/', 'index')->name('index');
 
         // this is my adminPanelCategory controller create.....
-        Route::get('/create', [AichaCategory::class, 'create'])->name('admin_category_create');
+        Route::get('/create', 'create')->name('create');
 
         // this is my adminPanelCategory controller store.....
-        Route::post('/store', [AichaCategory::class, 'store'])->name('admin_category_store');
+        Route::post('/store', 'store')->name('store');
 
         // this is for updating the data
-        Route::post('/update/{id}', [AichaCategory::class, 'update'])->name('admin_category_update');
+        Route::post('/update/{id}', 'update')->name('update');
 
         // this is my adminPanelCategory controller edit.....
-        Route::get('/edit/{id}', [AichaCategory::class, 'edit'])->name('admin_category_edit');
+        Route::get('/edit/{id}', 'edit')->name('edit');
 
-        // this is my adminPanelCategory controller delete.....
-        Route::get('/delete/{id}', [AichaCategory::class, 'delete'])->name('admin_category_delete');
+        // this is my adminPanelCategory controller destroy.....
+        Route::get('/destroy/{id}', 'destroy')->name('destroy');
 
         // this is my adminPanelCategory controller show.....
-        Route::get('/show/{id}', [AichaCategory::class, 'show'])->name('admin_category_show');
+        Route::get('/show/{id}', 'show')->name('show');
 
 
     });

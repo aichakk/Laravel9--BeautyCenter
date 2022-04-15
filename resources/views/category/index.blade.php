@@ -47,7 +47,9 @@
                                         <span class="text-secondary text-xs font-weight-normal">{{$rs->type}}</span>
                                     </td>
                                     <td class="align-middle text-center">
-                                        <span class="text-secondary text-xs font-weight-normal">{{$rs->image}}</span>
+                                        @if($rs->image)
+                                            <img src="{{Storage::url($rs->image)}}" class="avatar avatar-sm me-3">
+                                        @endif
                                     </td>
                                     <td class="align-middle text-center">
                                         <span
@@ -57,21 +59,21 @@
                                         <span class="text-secondary text-xs font-weight-normal">{{$rs->price}}</span>
                                     </td>
                                     <td class="align-middle">
-                                        <a href="/admin/category/delete/{{$rs->id}}"
+                                        <a href="{{route('admin.category.destroy',['id'=>$rs->id])}}"
                                            class="btn bg-gradient-danger font-weight-normal text-xs"
                                            data-toggle="tooltip" data-original-title="Edit user">
-                                            Delete
+                                            delete
                                         </a>
                                     </td>
                                     <td class="align-middle">
-                                        <a href="/admin/category/show/{{$rs->id}}"
+                                        <a href="{{route('admin.category.show',['id'=>$rs->id])}}"
                                            class="btn bg-gradient-info font-weight-normal text-xs" data-toggle="tooltip"
                                            data-original-title="Edit user">
                                             Show
                                         </a>
                                     </td>
                                     <td class="align-middle">
-                                        <a href="/admin/category/edit/{{$rs->id}}"
+                                        <a href="{{route('admin.category.edit',['id'=>$rs->id])}}"
                                            class="btn bg-gradient-success font-weight-normal text-xs"
                                            data-toggle="tooltip" data-original-title="Edit user">
                                             Edit
@@ -85,9 +87,12 @@
                     </div>
                 </div>
             </div>
-            <div type="submit" class="btn btn-primary btn-lg w-100"><a href="/admin/category/create/"
-                                                                       style="text-decoration: none;color: white">Add
-                    Services</a></div>
+            <a href="/admin/category/create/"
+               style="text-decoration: none;color: white">
+                <div type="submit" class="btn btn-primary btn-lg w-100">Add
+                    Services
+                </div>
+            </a>
 
             <div class="col-lg-4 col-md-6">
 
