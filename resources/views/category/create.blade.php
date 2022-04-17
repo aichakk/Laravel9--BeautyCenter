@@ -27,6 +27,25 @@
                             </div>
                             <form action="/admin/category/store" method="post" enctype="multipart/form-data">
                                 @csrf
+                                <select class="form-control select2" name="parent_id" style="...">
+                                    <option value="0" selected="selected">Main Category</option>
+                                    @foreach($data as $rs)
+                                        <option
+                                            value="{{ $rs->id }}"> {{App\Http\Controllers\AdminPanel\CategoryController::getParentsTree($rs, $rs->type)}}</option>
+                                    @endforeach
+                                </select>
+                                {{--                                <div class="dropdown">--}}
+                                {{--                                    <select>--}}
+                                {{--                                    <button class="btn bg-gradient-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">--}}
+                                {{--                                        Secondary--}}
+                                {{--                                    </button>--}}
+                                {{--                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">--}}
+                                {{--                                        <li><a class="dropdown-item" href="#">Action</a></li>--}}
+                                {{--                                        <li><a class="dropdown-item" href="#">Another action</a></li>--}}
+                                {{--                                        <li><a class="dropdown-item" href="#">Something else here</a></li>--}}
+                                {{--                                    </ul>--}}
+                                {{--                                    </select>--}}
+                                {{--                                </div>--}}
                                 <div class="input-group input-group-outline my-3">
                                     <label class="form-label">Service-Price</label>
                                     <input type="text" name="price" class="form-control">

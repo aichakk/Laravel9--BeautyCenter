@@ -9,6 +9,21 @@ use Illuminate\Support\Facades\Storage;
 
 class CategoryController extends Controller
 {
+
+    protected $appends = [
+        'getParentsTree'
+    ];
+
+    public static function getParentsTree($category, $type)
+    {
+        if ($category->parent_id == 0) {
+            return $type;
+        }
+        $parent = Category::find($category->parent_id);
+        $type = $parent->type . '>' . $type;
+        return CategoryController::getParentsTree($category, $type);
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -29,7 +44,8 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        return view('category.create');
+        $data = Category::all();
+        return view('category.create', ['data' => $data]);
     }
 
     /**
@@ -42,7 +58,7 @@ class CategoryController extends Controller
     {
         $data = new Category();
 
-        $data->parent_id = 0;
+        $data->parent_id = $request->parent_id;
         $data->price = $request->price;
         $data->discription = $request->description;
         $data->image = $request->image;
@@ -76,11 +92,13 @@ class CategoryController extends Controller
      * @param \App\Models\Category $category
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Category $category, $id)
     {
         $data = Category::find($id);
+        $datalist = Category::all();
         return view('category.edit', [
-            'data' => $data
+            'data' => $data,
+            'datalist' => $datalist
         ]);
     }
 
@@ -94,7 +112,7 @@ class CategoryController extends Controller
     public function update(Request $request, Category $category, $id)
     {
         $data = Category::find($id);
-        $data->parent_id = 0;
+        $data->parent_id = $request->parent_id;
         $data->type = $request->type;
         $data->discription = $request->description;
         $data->price = $request->price;
@@ -107,16 +125,19 @@ class CategoryController extends Controller
 
     /**
      * Remove the specified resource from storage.
-     *
+     *cted
      * @param \App\Models\Category $category
      * @return \Illuminate\Http\Response
      */
     public function destroy(Category $category, $id)
     {
         $data = Category::find($id);
-        Storage::delete($data->image);
+        if ($data->image && Storage::disk('public')->exists($data->image)) {
+            Storage::delete($data->image);
+        }
         $data->delete();
         return redirect('/admin/category');
 
     }
+
 }

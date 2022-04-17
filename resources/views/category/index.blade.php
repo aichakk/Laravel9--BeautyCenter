@@ -26,7 +26,7 @@
                                     Image
                                 </th>
                                 <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                    Description
+                                    Parent_id
                                 </th>
                                 <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                     Price
@@ -53,7 +53,7 @@
                                     </td>
                                     <td class="align-middle text-center">
                                         <span
-                                            class="text-secondary text-xs font-weight-normal">{{$rs->discription}}</span>
+                                            class="text-secondary text-xs font-weight-normal">{{$rs->parent_id}}</span>
                                     </td>
                                     <td class="align-middle text-center">
                                         <span class="text-secondary text-xs font-weight-normal">{{$rs->price}}</span>
@@ -62,7 +62,7 @@
                                         <a href="{{route('admin.category.destroy',['id'=>$rs->id])}}"
                                            class="btn bg-gradient-danger font-weight-normal text-xs"
                                            data-toggle="tooltip" data-original-title="Edit user">
-                                            delete
+                                            destroy
                                         </a>
                                     </td>
                                     <td class="align-middle">
