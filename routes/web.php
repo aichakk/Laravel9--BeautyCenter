@@ -71,6 +71,30 @@ Route::prefix('admin')->name('admin.')->group(function () {
 
 
     });
+    Route::prefix('product')->name('product.')->controller(AichaCategory::class)->group(function () {
+        // this is my product controller for category index.....
+        Route::get('/', 'index')->name('index');
+
+        // this is my product controller for  create.....
+        Route::get('/create', 'create')->name('create');
+
+        // this is my product controller for category store.....
+        Route::post('/store', 'store')->name('store');
+
+        // this is my product controller for category update.....
+        Route::post('/update/{id}', 'update')->name('update');
+
+        // this is my product controller for category edit.....
+        Route::get('/edit/{id}', 'edit')->name('edit');
+
+        // this is my product controller for category destrtoy.....
+        Route::get('/destroy/{id}', 'destroy')->name('destroy');
+
+        // this is my product controller for category show.....
+        Route::get('/show/{id}', 'show')->name('show');
+
+
+    });
 });
 
 

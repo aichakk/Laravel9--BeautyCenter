@@ -20,8 +20,9 @@ class CategoryController extends Controller
             return $type;
         }
         $parent = Category::find($category->parent_id);
-        $type = $parent->type . '>' . $type;
-        return CategoryController::getParentsTree($category, $type);
+        $type = $parent->type . ' > ' . $type;
+        return CategoryController::getParentsTree($parent, $type);
+
     }
 
     /**
@@ -92,15 +93,17 @@ class CategoryController extends Controller
      * @param \App\Models\Category $category
      * @return \Illuminate\Http\Response
      */
-    public function edit(Category $category, $id)
+    public function edit($id)
     {
+
         $data = Category::find($id);
-        $datalist = Category::all();
+        $dataList = Category::all();
         return view('category.edit', [
             'data' => $data,
-            'datalist' => $datalist
+            'dataList' => $dataList
         ]);
     }
+
 
     /**
      * Update the specified resource in storage.

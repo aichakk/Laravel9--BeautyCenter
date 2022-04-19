@@ -13,7 +13,6 @@
         @include('homeAdminP.header')
 
         <div class="container-fluid py-4">
-
             <div class="col-lg-8 col-md-6 mb-md-0 mb-4">
                 <div class="card">
                     <div class="card-header pb-0">
@@ -25,7 +24,7 @@
                                     <span class="font-weight-bold ms-1">Our Best </span>Beauty services available
                                 </p>
                             </div>
-                            <form action="/admin/category/store" method="post" enctype="multipart/form-data">
+                            <form action="/admin/product/store" method="post" enctype="multipart/form-data">
                                 @csrf
                                 <select name="parent_id" class="btn select2 bg-secondary" style="color:black  ">
                                     <option value="0" selected="selected">Main Category</option>

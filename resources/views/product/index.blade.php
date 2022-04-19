@@ -60,21 +60,21 @@
                                         <span class="text-secondary text-xs font-weight-normal">{{$rs->price}}</span>
                                     </td>
                                     <td class="align-middle">
-                                        <a href="{{route('admin.category.destroy',['id'=>$rs->id])}}"
+                                        <a href="{{route('admin.product.destroy',['id'=>$rs->id])}}"
                                            class="btn bg-gradient-danger font-weight-normal text-xs"
                                            data-toggle="tooltip" data-original-title="Edit user">
                                             destroy
                                         </a>
                                     </td>
                                     <td class="align-middle">
-                                        <a href="{{route('admin.category.show',['id'=>$rs->id])}}"
+                                        <a href="{{route('admin.product.show',['id'=>$rs->id])}}"
                                            class="btn bg-gradient-info font-weight-normal text-xs" data-toggle="tooltip"
                                            data-original-title="Edit user">
                                             Show
                                         </a>
                                     </td>
                                     <td class="align-middle">
-                                        <a href="{{route('admin.category.edit',['id'=>$rs->id])}}"
+                                        <a href="{{route('admin.product.edit',['id'=>$rs->id])}}"
                                            class="btn bg-gradient-success font-weight-normal text-xs"
                                            data-toggle="tooltip" data-original-title="Edit user">
                                             Edit
@@ -88,7 +88,7 @@
                     </div>
                 </div>
             </div>
-            <a href="/admin/category/create/"
+            <a href="/admin/product/create/"
                style="text-decoration: none;color: white">
                 <div type="submit" class="btn btn-primary btn-lg w-100">Add
                     Services
