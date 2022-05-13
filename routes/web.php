@@ -2,6 +2,7 @@
 // my home page controller
 use App\Http\Controllers\AichaController;
 
+
 // additional files.
 use Illuminate\Support\Facades\Route;
 
@@ -9,6 +10,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminPanel\AichaController as Aicha;
 
 use App\Http\Controllers\AdminPanel\CategoryController as AichaCategory;
+
+use App\Http\Controllers\AdminPanel\ServiceController as AichaServiceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -71,26 +74,26 @@ Route::prefix('admin')->name('admin.')->group(function () {
 
 
     });
-    Route::prefix('product')->name('product.')->controller(AichaCategory::class)->group(function () {
-        // this is my product controller for category index.....
+    Route::prefix('service')->name('service.')->controller(AichaServiceController::class)->group(function () {
+        // this is my service controller for category index.....
         Route::get('/', 'index')->name('index');
 
-        // this is my product controller for  create.....
+        // this is my service controller for  create.....
         Route::get('/create', 'create')->name('create');
 
-        // this is my product controller for category store.....
+        // this is my service controller for category store.....
         Route::post('/store', 'store')->name('store');
 
-        // this is my product controller for category update.....
+        // this is my service controller for category update.....
         Route::post('/update/{id}', 'update')->name('update');
 
-        // this is my product controller for category edit.....
+        // this is my service controller for category edit.....
         Route::get('/edit/{id}', 'edit')->name('edit');
 
-        // this is my product controller for category destrtoy.....
+        // this is my service controller for category destrtoy.....
         Route::get('/destroy/{id}', 'destroy')->name('destroy');
 
-        // this is my product controller for category show.....
+        // this is my service controller for category show.....
         Route::get('/show/{id}', 'show')->name('show');
 
 

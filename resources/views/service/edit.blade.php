@@ -25,7 +25,7 @@
 
                                 </p>
                             </div>
-                            <form action="{{route('admin.product.update',['id'=>$data->id])}}" method="post"
+                            <form action="{{route('admin.service.update',['id'=>$data->id])}}" method="post"
                                   enctype="multipart/form-data">
                                 @csrf
                                 <select class="btn dropdown select2 bg-gradient-secondary" name="parent_id"

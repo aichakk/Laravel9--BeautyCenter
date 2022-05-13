@@ -20,11 +20,11 @@
                         <div class="card-header pb-0">
                             <h6>showing: {{$data->type}}</h6>
                         </div>
-                        <a href="{{route('admin.product.edit',['id'=>$data->id])}}"
+                        <a href="{{route('admin.service.edit',['id'=>$data->id])}}"
                            style="text-decoration: none;color: white">
                             <div type="submit" class="btn btn-secondary btn-lg w-25">Edit</div>
                         </a>
-                        <a href="{{route('admin.product.destroy',['id'=>$data->id])}}"
+                        <a href="{{route('admin.service.destroy',['id'=>$data->id])}}"
                            style="text-decoration: none;color: white">
                             <div type="submit" class="btn btn-primary btn-lg w-25">Destroy</div>
                         </a>
