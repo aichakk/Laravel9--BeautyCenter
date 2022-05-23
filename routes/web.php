@@ -13,6 +13,8 @@ use App\Http\Controllers\AdminPanel\CategoryController as AichaCategory;
 
 use App\Http\Controllers\AdminPanel\ServiceController as AichaServiceController;
 
+use App\Http\Controllers\AdminPanel\ImageController as AichaImageController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -95,6 +97,31 @@ Route::prefix('admin')->name('admin.')->group(function () {
 
         // this is my service controller for category show.....
         Route::get('/show/{id}', 'show')->name('show');
+
+    });
+
+//    images routes are below
+    Route::prefix('image')->name('image.')->controller(AichaImageController::class)->group(function () {
+        // this is my service controller for category index.....
+        Route::get('/{pid}', 'index')->name('index');
+
+        // this is my service controller for  create.....
+        Route::get('/create/{pid}', 'create')->name('create');
+
+        // this is my service controller for category store.....
+        Route::post('/store/{pid}', 'store')->name('store');
+
+        // this is my service controller for category update.....
+        Route::post('/update/{id}/{pid}', 'update')->name('update');
+
+        // this is my service controller for category edit.....
+        Route::get('/edit/{id}/{pid}', 'edit')->name('edit');
+
+        // this is my service controller for category destrtoy.....
+        Route::get('/destroy/{id}/{pid}', 'destroy')->name('destroy');
+
+        // this is my service controller for category show.....
+        Route::get('/show/{id}/{pid}', 'show')->name('show');
 
 
     });

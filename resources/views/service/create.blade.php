@@ -24,7 +24,7 @@
                                     <span class="font-weight-bold ms-1">Our Best </span>Beauty services available
                                 </p>
                             </div>
-                            <form action="/admin/product/store" method="post" enctype="multipart/form-data">
+                            <form action="/admin/service/store" method="post" enctype="multipart/form-data">
                                 @csrf
                                 <select name="parent_id" class="btn select2 bg-secondary" style="color:black  ">
                                     <option value="0" selected="selected">Main Category</option>

@@ -2,8 +2,6 @@
 
 @section('title', 'ServicesList')
 
-
-
 @section('content')
     <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
         @include('homeAdminP.header')
@@ -23,13 +21,16 @@
                                     Service-Type
                                 </th>
                                 <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                    Image
+                                    Image-Gallery
                                 </th>
                                 <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                     Parent_id
                                 </th>
                                 <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                     Price
+                                </th>
+                                <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                    Image
                                 </th>
                                 <th class="text-secondary opacity-7"></th>
                                 <th class="text-secondary opacity-7"></th>
@@ -51,6 +52,14 @@
                                         @if($rs->image)
                                             <img src="{{Storage::url($rs->image)}}" class="avatar avatar-sm me-3">
                                         @endif
+                                    </td>
+                                    <td class="align-middle text-center">
+                                        <a href="{{route('admin.image.index',['pid'=>$rs->id])}}"
+                                           onclick="return  !window.open(this.href,'','_self')"
+                                           data-toggle="tooltip">
+                                            <img class="avatar avatar-sm me-3"
+                                                 src="{{asset('assets')}}/images/imagegalary.png" alt="Image">
+                                        </a>
                                     </td>
                                     <td class="align-middle text-center">
                                         <span

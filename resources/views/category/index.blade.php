@@ -20,7 +20,7 @@
                                     Id
                                 </th>
                                 <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                    Service-Type
+                                    Category-Type
                                 </th>
                                 <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                     Image
@@ -91,7 +91,7 @@
             <a href="/admin/category/create/"
                style="text-decoration: none;color: white">
                 <div type="submit" class="btn btn-primary btn-lg w-100">Add
-                    Services
+                    Categories
                 </div>
             </a>
 
