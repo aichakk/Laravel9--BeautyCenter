@@ -7,6 +7,11 @@
 
 @stop
 
+{{--text editor plugin--}}
+@section('head')
+    <script src="https://cdn.ckeditor.com/ckeditor5/34.0.0/classic/ckeditor.js"></script>
+@endsection
+
 
 @section('content')
     <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
@@ -40,6 +45,23 @@
                                 <div class="input-group input-group-outline my-3">
                                     <label class="form-label">Service-type</label>
                                     <input type="text" name="type" class="form-control">
+                                </div>
+                                <div class="row">
+                                    <div class="form-group">
+                                        <label for="exampleFormControlTextarea1">Enter detail info</label>
+                                        <textarea name="detail" class="form-control" id="detail"
+                                                  rows="3"></textarea>
+                                        <script>
+                                            ClassicEditor
+                                                .create(document.querySelector('#detail'))
+                                                .then(editor => {
+                                                    console.log(editor);
+                                                })
+                                                .catch(error => {
+                                                    console.error(error);
+                                                });
+                                        </script>
+                                    </div>
                                 </div>
                                 <div class="input-group input-group-outline my-3">
                                     <label class="form-label">Service-description</label>

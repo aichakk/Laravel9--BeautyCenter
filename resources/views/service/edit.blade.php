@@ -45,6 +45,23 @@
                                     <label class="form-label"></label>
                                     <input type="text" name="type" value="{{$data->type}}" class="form-control">
                                 </div>
+                                <div class="row">
+                                    <div class="form-group">
+                                        <label for="exampleFormControlTextarea1">Enter detail info</label>
+                                        <textarea name="detail" class="form-control" id="detail"
+                                                  rows="3"></textarea>
+                                        <script>
+                                            ClassicEditor
+                                                .create(document.querySelector('#detail'))
+                                                .then(editor => {
+                                                    console.log(editor);
+                                                })
+                                                .catch(error => {
+                                                    console.error(error);
+                                                });
+                                        </script>
+                                    </div>
+                                </div>
                                 <div class="input-group input-group-outline my-3">
                                     <label class="form-label"></label>
                                     <input type="text" name="description" value="{{$data->discription}}"

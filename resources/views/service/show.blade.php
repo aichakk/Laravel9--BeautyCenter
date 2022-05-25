@@ -55,6 +55,14 @@
                             </tr>
                             <tr>
                                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                    Service-Detail
+                                </th>
+                                <td class="align-dle">
+                                    {{$data->detail}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                     Service-Price
                                 </th>
                                 <td class="align-mide">
