@@ -21,6 +21,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
     <!-- CSS Files -->
     <link id="pagestyle" href="{{asset('assets')}}/admin/css/material-dashboard.css?v=3.0.2" rel="stylesheet"/>
+
     @yield('head')
 </head>
 
