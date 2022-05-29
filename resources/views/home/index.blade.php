@@ -7,8 +7,9 @@
 
     <p>This is appended to the master sidebar.</p>
 @stop
-
+@include('home.header')
 @section('content')
+
     <!--==============================Content=================================-->
     <div class="links">
         <div class="container_12">
@@ -41,4 +42,4 @@
         </div>
         <div class="clear"></div>
     </div>
-{{--    nÇ:Çjdvcksl--}}
+@endsection

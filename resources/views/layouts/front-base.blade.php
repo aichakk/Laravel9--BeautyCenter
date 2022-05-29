@@ -79,7 +79,6 @@
     @yield('head')
 </head>
 <body class="page1" id="top">
-@include('home.header')
 
 
 <div class="container">
