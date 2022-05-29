@@ -1,7 +1,7 @@
 @extends('layouts.front-base')
 
 @section('title', 'BeautyCenter')
-
+{{--//bjhgj--}}
 @section('sidebar')
     @@parent
 
