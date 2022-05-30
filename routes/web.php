@@ -44,7 +44,7 @@ Route::get('/', [AichaController::class, 'index'])->name('home');
 
 // this is my admin panel grouped with sub:cat function.....
 ///jhgjhyjhjhj
-
+//there are all the routes
 // this is my admin panel grouped with sub:cat function.....
 Route::prefix('admin')->name('admin.')->group(function () {
 
