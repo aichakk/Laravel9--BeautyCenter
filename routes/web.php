@@ -3,6 +3,7 @@
 use App\Http\Controllers\AichaController;
 
 
+
 // additional files.
 use Illuminate\Support\Facades\Route;
 
@@ -41,12 +42,24 @@ Route::middleware([
 // this is my home controller.....
 
 Route::get('/', [AichaController::class, 'index'])->name('home');
+//this is my package route
+Route::get('/package/{id}', [AichaController::class, 'package'])->name('package');
 
+// this is the contact page home settings......
+Route::get('/contact', [AichaController::class, 'contact'])->name('contact');
+Route::get('/about', [AichaController::class, 'about'])->name('about');
+Route::get('/reference', [AichaController::class, 'references'])->name('references');
+Route::post('/storemessage', [AichaController::class, 'storemessage'])->name('storemessage');
 // this is my admin panel grouped with sub:cat function.....
 
 //there are all the routes
 // this is my admin panel grouped with sub:cat function.....
 Route::prefix('admin')->name('admin.')->group(function () {
+
+    Route::get('/settings', [Aicha::class, 'setting'])->name('settings');
+
+    Route::post('/settings/update', [Aicha::class, 'settingUpdate'])->name('settingUpdate');
+//    Route::get('/settings',[App\Http\Controllers\AdminPanel\AichaController::class, 'settings'])->name('settings');
 
     Route::get('/', [Aicha::class, 'index'])->name('index');
 
@@ -102,6 +115,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
 
 //    images routes are below
     Route::prefix('image')->name('image.')->controller(AichaImageController::class)->group(function () {
+
         // this is my service controller for category index.....
         Route::get('/{pid}', 'index')->name('index');
 

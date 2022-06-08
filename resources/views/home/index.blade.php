@@ -13,9 +13,30 @@
     <!--==============================Content=================================-->
     <div class="links">
         <div class="container_12">
-            <div class="grid_4"><a href="#"><strong>Face </strong>Care</a></div>
-            <div class="grid_4"><a href="#" class="l1"><strong>Hand</strong>Care</a></div>
-            <div class="grid_4"><a href="#" class="l2"><strong>Foot</strong>Care</a></div>
+            <div class="container">
+                <h1 style="text-align: center;font-family: Roboto, Helvetica, Arial, sans-serif;font-size: 2em;">
+                    Our Services
+                </h1>
+            </div>
+
+            @foreach($packagesData as $pd)
+
+                <div class="grid_4"><a href="{{route('package',['id'=>$pd->id])}}"><strong>{{$pd->type}}</strong></a>
+                </div>
+
+                {{--                <div class="col-lg-3 col-md-6 mb-5">--}}
+
+                {{--                        <div class="card border-0 bg-secondary text-center text-white">--}}
+                {{--                            <img class="card-img-top" src="{{Storage::url($pd->image)}}" alt="">--}}
+                {{--                            <div class="card-body bg-secondary">--}}
+                {{--                                <h4 class="card-title text-primary">{{$pd->title}}</h4>--}}
+                {{--                                <p class="card-text">Trainer</p>--}}
+                {{--                            </div>--}}
+                {{--                        </div>--}}
+                {{--                    </a>--}}
+                {{--                </div>--}}
+
+            @endforeach
         </div>
         <div class="clear"></div>
     </div>

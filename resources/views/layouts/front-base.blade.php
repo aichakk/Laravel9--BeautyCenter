@@ -78,12 +78,11 @@
 
     @yield('head')
 </head>
-<body class="page1" id="top">
+<body class="page1" id="top" style="background-color: #cebbd6 !important;">
 
 
-<div class="container">
-    @yield('content')
-</div>
+@yield('content')
+
 
 @include('home.footer')
 @yield('foot')
