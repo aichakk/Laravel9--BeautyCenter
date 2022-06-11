@@ -109,6 +109,7 @@ class ServiceController extends Controller
         $data->category_id = $request->parent_id;
         $data->user_id = 0;
         $data->description = $request->description;
+        $data->detail = $request->detail;
         $data->type = $request->type;
         $data->price = $request->price;
         if ($request->file('image')) {

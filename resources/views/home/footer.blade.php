@@ -1,24 +1,26 @@
 <footer>
-    <div class="container_12">
-        <div class="grid_12">
-            <ul>
-                <li class="current"><a href="index.html">Home</a></li>
-                <li><a href="index-1.html">Services</a></li>
-                <li><a href="index-2.html">Staff</a></li>
-                <li><a href="index-3.html">Prices</a></li>
-                <li><a href="index-4.html">Contacts</a></li>
-            </ul>
-            <div class="clear"></div>
-            <div class="socials">
-                <a href="#"><span class=" fa-twitter fa"></span></a>
-                <a href="#"><span class="fa fa-facebook"></span></a>
-                <a href="#"></a>
-            </div>
-            <div class="copy">
-                Ego (C) <span id="copyright-year"></span> | <a href="#">Privacy Policy</a> | Website Template Designed
-                by <a href="http://www.templatemonster.com/" rel="nofollow">TemplateMonster.com</a>
-            </div>
-        </div>
-        <div class="clear"></div>
-    </div>
+    <!-- ALL JS FILES -->
+    <script src="{{asset('assets')}}/js/all.js"></script>
+    <script src="{{asset('assets')}}/js/responsive-tabs.js"></script>
+    <!-- ALL PLUGINS -->
+    <script src="{{asset('assets')}}/js/custom.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+        (function($) {
+            "use strict";
+            $("#menu-toggle").click(function(e) {
+                e.preventDefault();
+                $("#wrapper").toggleClass("toggled");
+            });
+            smoothScroll.init({
+                selector: '[data-scroll]', // Selector for links (must be a class, ID, data attribute, or element tag)
+                selectorHeader: null, // Selector for fixed headers (must be a valid CSS selector) [optional]
+                speed: 500, // Integer. How fast to complete the scroll in milliseconds
+                easing: 'easeInOutCubic', // Easing pattern to use
+                offset: 0, // Integer. How far to offset the scrolling anchor location in pixels
+                callback: function ( anchor, toggle ) {} // Function to run after scrolling
+            });
+        })(jQuery);
+    </script>
 </footer>

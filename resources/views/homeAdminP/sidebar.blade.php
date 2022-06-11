@@ -30,20 +30,20 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white " href="/admin/users">
+                <a class="nav-link text-white " href="/admin/user">
                     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                        <i class="fas fa-users opacity-10"></i>
+                        <i class="fas fa-user opacity-10"></i>
                     </div>
-                    <span class="nav-link-text ms-1">Users</span>
+                    <span class="nav-link-text ms-1">User</span>
                 </a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link text-white " href="/admin/comment">
+                <a class="nav-link text-white " href="/admin/message">
                     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                         <i class="fas fa-comment opacity-10"></i>
                     </div>
-                    <span class="nav-link-text ms-1">Comments</span>
+                    <span class="nav-link-text ms-1">Message</span>
                 </a>
             </li>
             <li class="nav-item">
