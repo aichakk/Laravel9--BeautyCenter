@@ -103,8 +103,6 @@ class AptController extends Controller
      */
     public function add($id)
     {
-        echo 'subcribed';
-        exit();
 
         $data = Appointment::where('product_id', $id)->where('user_id', Auth::id())->first(); // Check product for user
 

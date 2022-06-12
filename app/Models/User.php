@@ -65,4 +65,10 @@ class User extends Authenticatable
         return $this->belongsToMany(Role::class, 'role_users');
     }
 
+    # This has many roles
+    public function apointment()
+    {
+        return $this->hasMany(Appointment::class);
+    }
+
 }

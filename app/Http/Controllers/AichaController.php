@@ -48,6 +48,19 @@ class AichaController extends Controller
 
     }
 
+    public function appointment($id)
+    {
+
+        $data = Service::find($id);
+        $images = DB::table('images')->where('product_id', $id)->get();
+        return view('home.makeapointment', [
+            'data' => $data,
+            'images' => $images
+
+        ]);
+
+    }
+
     //contact
     public function contact()
     {
