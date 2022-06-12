@@ -77,6 +77,11 @@ Route::post('/adminlogin', [AichaController::class, 'adminlogincheck'])->name('a
 //there are all the routes
 //**************** user authentication **************************
 Route::middleware('auth')->group(function () {
+    Route::prefix('userpanel')->name('userpanel.')->controller(\App\Http\Controllers\userController::class)->group(function () {
+        Route::get('/', 'index')->name('index');
+        Route::get('/reviews', 'reviews')->name('reviews');
+        Route::get('/reviewdestroy/{id}', 'reviewdestroy')->name('reviewdestroy');
+    });
 
     Route::prefix('userpanel')->name('userpanel.')->controller(\App\Http\Controllers\userController::class)->group(function () {
         Route::get('/', 'index')->name('index');
@@ -84,9 +89,9 @@ Route::middleware('auth')->group(function () {
 
 
 // this is my admin panel grouped with sub:cat function.....
-Route::middleware('admin')->prefix('admin')->name('admin.')->group(function () {
+    Route::middleware('admin')->prefix('admin')->name('admin.')->group(function () {
 
-    Route::get('/settings', [Aicha::class, 'setting'])->name('settings');
+        Route::get('/settings', [Aicha::class, 'setting'])->name('settings');
 
     Route::post('/settings/update', [Aicha::class, 'settingUpdate'])->name('settingUpdate');
 //    Route::get('/settings',[App\Http\Controllers\AdminPanel\AichaController::class, 'settings'])->name('settings');
