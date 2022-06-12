@@ -17,7 +17,7 @@
                     <h3 class="text-primary text-capitalize m-0">Beauty Center</h3>
                     <h2 class="display-2 m-0 mt-2 mt-md-4 text-white font-weight-bold text-capitalize">Be Happy With
                         Us</h2>
-                    <a href="/registeruser" class="btn btn-lg btn-outline-light mt-3 mt-md-5 py-md-3 px-md-5">Join Us
+                    <a href="/register" class="btn btn-lg btn-outline-light mt-3 mt-md-5 py-md-3 px-md-5">Register
                         Now</a>
                 </div>
             @endforeach
@@ -113,89 +113,14 @@
 
                 <hr class="hr1">
 
-                <div class="row text-center">
-                    <div class="col-lg-12">
-                        <div class="owl-services owl-carousel owl-theme">
 
-                            <div class="service-widget">
-                                <div class="post-media wow fadeIn">
-                                    <a href="{{asset('assets')}}/uploads/barber_01.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
-                                    <img src="{{asset('assets')}}/uploads/barber_01.jpg" alt="" class="img-responsive img-rounded">
-                                </div>
-                                <div class="dit-box">
-                                    <h3>Show us Your Graft Style</h3>
-                                    <p>Aliquam sagittis ligula et sem lacinia, ut facilisis enim sollicitudin. Proin nisi est, convallis nec purus vitae, iaculis posuere sapien. Cum sociis natoque.</p>
-                                </div>
-                            </div><!-- end service -->
-
-                            <div class="service-widget">
-                                <div class="post-media wow fadeIn">
-                                    <a href="{{asset('assets')}}/uploads/barber_02.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
-                                    <img src="{{asset('assets')}}/uploads/barber_02.jpg" alt="" class="img-responsive img-rounded">
-                                </div>
-                                <div class="dit-box">
-                                    <h3>Outstanding Barber Shop</h3>
-                                    <p>Duis at tellus at dui tincidunt scelerisque nec sed felis. Suspendisse id dolor sed leo rutrum euismod. Nullam vestibulum fermentum erat. It nam auctor. </p>
-                                </div>
-                            </div><!-- end service -->
-
-                            <div class="service-widget">
-                                <div class="post-media wow fadeIn">
-                                    <a href="{{asset('assets')}}/uploads/barber_03.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
-                                    <img src="{{asset('assets')}}/uploads/barber_03.jpg" alt="" class="img-responsive img-rounded">
-                                </div>
-                                <div class="dit-box">
-                                    <h3>The Barber Materials</h3>
-                                    <p>Etiam materials ut mollis tellus, vel posuere nulla. Etiam sit amet lacus vitae massa sodales aliquam at eget quam. Integer ultricies et magna quis posuere.</p>
-                                </div>
-                            </div><!-- end service -->
-
-                            <div class="service-widget">
-                                <div class="post-media wow fadeIn">
-                                    <a href="{{asset('assets')}}/uploads/barber_04.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
-                                    <img src="{{asset('assets')}}/uploads/barber_04.jpg" alt="" class="img-responsive img-rounded">
-                                </div>
-                                <div class="dit-box">
-                                    <h3>The Barber Materials</h3>
-                                    <p>Etiam materials ut mollis tellus, vel posuere nulla. Etiam sit amet lacus vitae massa sodales aliquam at eget quam. Integer ultricies et magna quis posuere.</p>
-                                </div>
-                            </div><!-- end service -->
-
-                            <div class="service-widget">
-                                <div class="post-media wow fadeIn">
-                                    <a href="{{asset('assets')}}/uploads/barber_05.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
-                                    <img src="{{asset('assets')}}/uploads/barber_05.jpg" alt="" class="img-responsive img-rounded">
-                                </div>
-                                <div class="dit-box">
-                                    <h3>The Barber Materials</h3>
-                                    <p>Etiam materials ut mollis tellus, vel posuere nulla. Etiam sit amet lacus vitae massa sodales aliquam at eget quam. Integer ultricies et magna quis posuere.</p>
-                                </div>
-                            </div><!-- end service -->
-
-                            <div class="service-widget">
-                                <div class="post-media wow fadeIn">
-                                    <a href="{{asset('assets')}}/uploads/barber_06.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
-                                    <img src="{{asset('assets')}}/uploads/barber_06.jpg" alt="" class="img-responsive img-rounded">
-                                </div>
-                                <div class="dit-box">
-                                    <h3>The Barber Materials</h3>
-                                    <p>Etiam materials ut mollis tellus, vel posuere nulla. Etiam sit amet lacus vitae massa sodales aliquam at eget quam. Integer ultricies et magna quis posuere.</p>
-                                </div>
-                            </div><!-- end service -->
-
-                        </div>
-                    </div>
-                </div><!-- end row -->
             </div><!-- end container -->
         </div><!-- end section -->
 
         <div id="pricing" class="section lb">
             <div class="container">
                 <div class="section-title row text-center">
-                    <div class="col-md-8 offset-md-2">
-                        <small>OUR BABRER PRICING</small>
-                        <h3>BABRER PRICING</h3>
-                    </div>
+
                 </div><!-- end title -->
                 <div class="row flex-items-xs-middle flex-items-xs-center">
 
@@ -363,7 +288,8 @@
                                     <small>The Barber</small>
                                 </div>
                                 <!-- end title -->
-                                <p>Hello guys, I am Soren from Sirbistana. I am senior art director and barber of the Barber Shop Website.</p>
+                                <p>Hello guys, I am Soren from Sirbistana. I am senior art director and barber of the
+                                    Barber Shop Website.</p>
                             </div>
                             <div class="t-bottom"></div>
                         </div><!--widget -->
@@ -372,75 +298,75 @@
             </div><!-- end container -->
         </div><!-- end section -->
 
-        <div id="testimonials" class="parallax section db parallax-inner-bg"   style=" background: url('{{asset('assets')}}/uploads/parallax_20.jpg') no-repeat top center;  background-size: cover;     background-attachment: fixed;">
-            <div class="container">
-                <div class="section-title row text-center">
-                    <div class="col-md-8 offset-md-2">
-                        <small>LET'S SEE OUR TESTIMONIALS</small>
-                        <h3>HAPPY TESTIMONIALS</h3>
-                    </div>
-                </div><!-- end title -->
+        {{--        <div id="testimonials" class="parallax section db parallax-inner-bg"   style=" background: url('{{asset('assets')}}/uploads/parallax_20.jpg') no-repeat top center;  background-size: cover;     background-attachment: fixed;">--}}
+        {{--            <div class="container">--}}
+        {{--                <div class="section-title row text-center">--}}
+        {{--                    <div class="col-md-8 offset-md-2">--}}
+        {{--                        <small>LET'S SEE OUR TESTIMONIALS</small>--}}
+        {{--                        <h3>HAPPY TESTIMONIALS</h3>--}}
+        {{--                    </div>--}}
+        {{--                </div><!-- end title -->--}}
 
-                <div class="row">
-                    <div class="col-md-12 col-sm-12">
-                        <div class="testi-carousel owl-carousel owl-theme">
-                            <div class="testimonial clearfix">
-                                <div class="testi-meta">
-                                    <i class="fa fa-quote-right"></i>
-                                    <img src="{{asset('assets')}}/uploads/testi_01.png" alt="" class="img-responsive alignright">
-                                    <h4>James Fernando <small>- Manager of Racer</small></h4>
-                                </div>
-                                <div class="desc">
-                                    <h3>Wonderful Support!</h3>
-                                    <p class="lead">They have got my project on time with the competition with a sed highly skilled, and experienced & professional team.</p>
-                                </div>
-                                <!-- end testi-meta -->
-                            </div>
-                            <!-- end testimonial -->
-                            <div class="testimonial clearfix">
-                                <div class="testi-meta">
-                                    <i class="fa fa-quote-right"></i>
-                                    <img src="{{asset('assets')}}/uploads/testi_02.png" alt="" class="img-responsive alignright">
-                                    <h4>Jacques Philips <small>- Designer</small></h4>
-                                </div>
-                                <div class="desc">
-                                    <h3>Awesome Services!</h3>
-                                    <p class="lead">Explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you completed.</p>
-                                </div>
-                                <!-- end testi-meta -->
-                            </div>
-                            <!-- end testimonial -->
-                            <div class="testimonial clearfix">
-                                <div class="testi-meta">
-                                    <i class="fa fa-quote-right"></i>
-                                    <img src="{{asset('assets')}}/uploads/testi_03.png" alt="" class="img-responsive alignright">
-                                    <h4>Venanda Mercy <small>- Newyork City</small></h4>
-                                </div>
-                                <div class="desc">
-                                    <h3>Great & Talented Team!</h3>
-                                    <p class="lead">The master-builder of human happines no one rejects, dislikes avoids pleasure itself, because it is very pursue pleasure. </p>
-                                </div>
-                                <!-- end testi-meta -->
-                            </div>
-                            <!-- end testimonial -->
-                            <div class="testimonial clearfix">
-                                <div class="testi-meta">
-                                    <i class="fa fa-quote-right"></i>
-                                    <img src="{{asset('assets')}}/uploads/testi_03.png" alt="" class="img-responsive alignright">
-                                    <h4>Venanda Mercy <small>- Newyork City</small></h4>
-                                </div>
-                                <div class="desc">
-                                    <h3> Great & Talented Team!</h3>
-                                    <p class="lead">The master-builder of human happines no one rejects, dislikes avoids pleasure itself, because it is very pursue pleasure. </p>
-                                </div>
-                                <!-- end testi-meta -->
-                            </div>
-                            <!-- end testimonial -->
-                        </div><!-- end carousel -->
-                    </div><!-- end col -->
-                </div><!-- end row -->
-            </div><!-- end container -->
-        </div><!-- end section -->
+        {{--                <div class="row">--}}
+        {{--                    <div class="col-md-12 col-sm-12">--}}
+        {{--                        <div class="testi-carousel owl-carousel owl-theme">--}}
+        {{--                            <div class="testimonial clearfix">--}}
+        {{--                                <div class="testi-meta">--}}
+        {{--                                    <i class="fa fa-quote-right"></i>--}}
+        {{--                                    <img src="{{asset('assets')}}/uploads/testi_01.png" alt="" class="img-responsive alignright">--}}
+        {{--                                    <h4>James Fernando <small>- Manager of Racer</small></h4>--}}
+        {{--                                </div>--}}
+        {{--                                <div class="desc">--}}
+        {{--                                    <h3>Wonderful Support!</h3>--}}
+        {{--                                    <p class="lead">They have got my project on time with the competition with a sed highly skilled, and experienced & professional team.</p>--}}
+        {{--                                </div>--}}
+        {{--                                <!-- end testi-meta -->--}}
+        {{--                            </div>--}}
+        {{--                            <!-- end testimonial -->--}}
+        {{--                            <div class="testimonial clearfix">--}}
+        {{--                                <div class="testi-meta">--}}
+        {{--                                    <i class="fa fa-quote-right"></i>--}}
+        {{--                                    <img src="{{asset('assets')}}/uploads/testi_02.png" alt="" class="img-responsive alignright">--}}
+        {{--                                    <h4>Jacques Philips <small>- Designer</small></h4>--}}
+        {{--                                </div>--}}
+        {{--                                <div class="desc">--}}
+        {{--                                    <h3>Awesome Services!</h3>--}}
+        {{--                                    <p class="lead">Explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you completed.</p>--}}
+        {{--                                </div>--}}
+        {{--                                <!-- end testi-meta -->--}}
+        {{--                            </div>--}}
+        {{--                            <!-- end testimonial -->--}}
+        {{--                            <div class="testimonial clearfix">--}}
+        {{--                                <div class="testi-meta">--}}
+        {{--                                    <i class="fa fa-quote-right"></i>--}}
+        {{--                                    <img src="{{asset('assets')}}/uploads/testi_03.png" alt="" class="img-responsive alignright">--}}
+        {{--                                    <h4>Venanda Mercy <small>- Newyork City</small></h4>--}}
+        {{--                                </div>--}}
+        {{--                                <div class="desc">--}}
+        {{--                                    <h3>Great & Talented Team!</h3>--}}
+        {{--                                    <p class="lead">The master-builder of human happines no one rejects, dislikes avoids pleasure itself, because it is very pursue pleasure. </p>--}}
+        {{--                                </div>--}}
+        {{--                                <!-- end testi-meta -->--}}
+        {{--                            </div>--}}
+        {{--                            <!-- end testimonial -->--}}
+        {{--                            <div class="testimonial clearfix">--}}
+        {{--                                <div class="testi-meta">--}}
+        {{--                                    <i class="fa fa-quote-right"></i>--}}
+        {{--                                    <img src="{{asset('assets')}}/uploads/testi_03.png" alt="" class="img-responsive alignright">--}}
+        {{--                                    <h4>Venanda Mercy <small>- Newyork City</small></h4>--}}
+        {{--                                </div>--}}
+        {{--                                <div class="desc">--}}
+        {{--                                    <h3> Great & Talented Team!</h3>--}}
+        {{--                                    <p class="lead">The master-builder of human happines no one rejects, dislikes avoids pleasure itself, because it is very pursue pleasure. </p>--}}
+        {{--                                </div>--}}
+        {{--                                <!-- end testi-meta -->--}}
+        {{--                            </div>--}}
+        {{--                            <!-- end testimonial -->--}}
+        {{--                        </div><!-- end carousel -->--}}
+        {{--                    </div><!-- end col -->--}}
+        {{--                </div><!-- end row -->--}}
+        {{--            </div><!-- end container -->--}}
+        {{--        </div><!-- end section -->--}}
 
         <div class="copyrights">
             <div class="container">

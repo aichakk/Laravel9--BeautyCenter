@@ -123,9 +123,9 @@
             <span class="leaf4"></span>
         </div>
         <div class="mus">
-            <img src="images/lode-img.png" alt="" />
+            <img src="images/lode-img.png" alt=""/>
         </div>
-        <span class="loading" data-name="Loading">StyleBarber Loading</span>
+        <span class="loading" data-name="Loading">BeautyCenter Loading</span>
     </div>
 </div><!-- end loader -->
 <!-- END LOADER -->

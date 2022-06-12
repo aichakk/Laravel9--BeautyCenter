@@ -308,7 +308,7 @@ a img.aligncenter {
 -------------------------------------------------------------------*/
 
 .top-add{
-    background: #ed2d46;
+    background: FF69B4FF;
     border: none;
     border-radius: 0px;
     color: #ffffff;
@@ -349,7 +349,7 @@ a img.aligncenter {
 }
 .top-navbar .navbar-light .navbar-nav .nav-link::after {
     content: "";
-    background: #ed2d46;
+    background: #FF69B4FF;
     z-index: -1;
     width: 10px;
     height: 10px;
@@ -476,16 +476,16 @@ a img.aligncenter {
     position: absolute;
     left: 0px;
 }
-.home-hero .owl-nav .owl-prev:hover i{
-    background: #ed2d46;
+.home-hero .owl-nav .owl-prev:hover i {
+    background: #FF69B4FF;
     color: #ffffff;
 }
 .home-hero .owl-nav .owl-next{
     position: absolute;
     right: 0px;
 }
-.home-hero .owl-nav .owl-next:hover i{
-    background: #ed2d46;
+.home-hero .owl-nav .owl-next:hover i {
+    background: #FF69B4FF;
     color: #ffffff;
 }
 
@@ -898,8 +898,8 @@ a img.aligncenter {
 .desc {
     padding: 30px;
     position: relative;
-    background: #ed2d46;
-    border: 1px solid #ed2d46;
+    background: #FF69B4FF;
+    border: 1px solid #FF69B4FF;
     border-radius: 2px;
     text-align: right;
 }
@@ -968,8 +968,8 @@ a img.aligncenter {
     background: #ffffff;
 }
 
-.testi-carousel .owl-nav .owl-prev:hover i{
-    background: #ed2d46;
+.testi-carousel .owl-nav .owl-prev:hover i {
+    background: #FF69B4FF;
     color: #ffffff;
 }
 
@@ -977,8 +977,8 @@ a img.aligncenter {
     background: #ffffff;
 }
 
-.testi-carousel .owl-nav .owl-next:hover i{
-    background: #ed2d46;
+.testi-carousel .owl-nav .owl-next:hover i {
+    background: #FF69B4FF;
     color: #ffffff;
 }
 
@@ -1126,9 +1126,9 @@ body.barber_version .about-tab .nav-pills > li a:hover{
     background: #111111;
     border: none;
 }
-.about-tab .nav-pills > li > a.active{
+.about-tab .nav-pills > li > a.active {
     border: none;
-    background: #ed2d46;
+    background: #FF69B4FF;
     color: #ffffff;
 }
 
@@ -1272,7 +1272,7 @@ body.barber_version .about-tab .nav-pills > li a:hover{
     padding-top: 10px;
     font-size: 19px;
     font-style: normal;
-    color: #ed2d46;
+    color: #FF69B4FF;
     padding-bottom: 0;
 }
 
@@ -1382,18 +1382,18 @@ hr.invis1 {
     z-index: 1;
 }
 
-.dit-box{
+.dit-box {
     text-align: left;
     padding: 10px;
-    background: #ed2d46;
+    background: #FF69B4FF;
     color: #ffffff;
 }
 .owl-services .owl-nav .owl-prev i{
     background: #010101;
     color: #ffffff;
 }
-.owl-services .owl-nav .owl-prev:hover i{
-    background: #ed2d46;
+.owl-services .owl-nav .owl-prev:hover i {
+    background: #FF69B4FF;
     color: #ffffff;
 }
 
@@ -1401,8 +1401,8 @@ hr.invis1 {
     background: #010101;
     color: #ffffff;
 }
-.owl-services .owl-nav .owl-next:hover i{
-    background: #ed2d46;
+.owl-services .owl-nav .owl-next:hover i {
+    background: #FF69B4FF;
     color: #ffffff;
 }
 
@@ -2061,7 +2061,7 @@ select.mobile-device {
 
 .footer-links a:hover,
 .footer a:hover {
-    color: #ed2d46;
+    color: #FF69B4FF;
 }
 
 .footer-links li {
@@ -2200,8 +2200,8 @@ select.mobile-device {
     color: #010101;
 }
 
-.footer-distributed .footer-company-name a:hover{
-    color: #ed2d46;
+.footer-distributed .footer-company-name a:hover {
+    color: #FF69B4FF;
 }
 
 
@@ -2287,7 +2287,7 @@ select.mobile-device {
     right: 0;
     bottom: 0;
     left: 0;
-    background: #ed2d46;
+    background: #FF69B4FF;
     z-index: 11000;
     position: fixed;
     display: block
@@ -2382,8 +2382,8 @@ select.mobile-device {
     color: #ffffff;
 }
 
-.all-page-bar .title .breadcrumb, .all-page-bar .title .breadcrumb a{
-    background: #ed2d46;
+.all-page-bar .title .breadcrumb, .all-page-bar .title .breadcrumb a {
+    background: #FF69B4FF;
     font-size: 14px;
     font-weight: 400;
     line-height: 1;
@@ -2472,9 +2472,9 @@ body.barber_version .dev-list .widget:hover .hover-br .social-up-hover .footer-s
     margin-top: 70px;
 }
 
-.appointment-left h2{
+.appointment-left h2 {
     font-size: 38px;
-    color: #ed2d46;
+    color: #FF69B4FF;
     font-weight: 700;
 }
 
@@ -2539,7 +2539,7 @@ body.barber_version .dev-list .widget:hover .hover-br .social-up-hover .footer-s
     left: 0;
     width: 0%;
     height: 5px;
-    background-color: #ed2d46;
+    background-color: #FF69B4FF;
     transition: 0.5s;
 }
 .card:hover {
@@ -2608,8 +2608,8 @@ body.barber_version .dev-list .widget:hover .hover-br .social-up-hover .footer-s
     margin: 0px;
     padding-bottom: 5px;
 }
-.line-pricing a{
-    background: #ed2d46;
+.line-pricing a {
+    background: #FF69B4FF;
     color: #ffffff;
     border-radius: 2px;
     padding: 2px 5px;
