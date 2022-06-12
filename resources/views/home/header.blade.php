@@ -29,8 +29,9 @@
                         <a href="/loginuser" class="nav-item nav-link">Login</a>
                     @endguest
 {{--                    //else it will be the section of a guest--}}
-                    <li class="nav-item"><a class="nav-link" href="appointment.html">Appointment</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/appointment/1">Appointment</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{route('contact')}}">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/userpanel">dashboard</a></li>
                 </ul>
             </div>
         </div>

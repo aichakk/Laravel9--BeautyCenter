@@ -25,6 +25,8 @@ use App\Http\Controllers\AdminPanel\ServiceController as AichaServiceController;
 use App\Http\Controllers\AdminPanel\ImageController as AichaImageController;
 use App\Http\Controllers\userController as AichaHomeUserController;
 
+use App\Http\Controllers\AptController as AptController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -84,11 +86,39 @@ Route::middleware('auth')->group(function () {
     Route::prefix('userpanel')->name('userpanel.')->controller(\App\Http\Controllers\userController::class)->group(function () {
         Route::get('/', 'index')->name('index');
         Route::get('/reviews', 'reviews')->name('reviews');
+        Route::get('/appointmenta', 'appointmentas')->name('appointmenta');
         Route::get('/reviewdestroy/{id}', 'reviewdestroy')->name('reviewdestroy');
     });
 
     Route::prefix('userpanel')->name('userpanel.')->controller(\App\Http\Controllers\userController::class)->group(function () {
         Route::get('/', 'index')->name('index');
+    });
+
+//appoint ment controller
+    Route::prefix('apointments')->name('apointments.')->controller(AptController::class)->group(function () {
+
+        // my AdminPanle category-list
+        Route::get('/', 'index')->name('index');
+
+        // my AdminPanle create
+        Route::get('/create', 'create')->name('create');
+
+        // my AdminPanle store
+        Route::post('/store', 'store')->name('store');
+
+        // my AdminPanle update
+        Route::post('/update/{id}', 'update')->name('update');
+
+        // my AdminPanle edit
+        Route::get('/add/{id}', 'add')->name('add');
+
+        // my Adminpanle show
+        Route::get('/show/{id}', 'show')->name('show');
+
+        // my Adminpanle show
+        Route::get('/delete/{id}', 'delete')->name('delete');
+        // my Adminpanle show
+        Route::get('/destroy/{id}', 'destroy')->name('destroy');
     });
 
 
@@ -97,7 +127,7 @@ Route::middleware('auth')->group(function () {
 
         Route::get('/settings', [Aicha::class, 'setting'])->name('settings');
 
-    Route::post('/settings/update', [Aicha::class, 'settingUpdate'])->name('settingUpdate');
+        Route::post('/settings/update', [Aicha::class, 'settingUpdate'])->name('settingUpdate');
 //    Route::get('/settings',[App\Http\Controllers\AdminPanel\AichaController::class, 'settings'])->name('settings');
 
     Route::get('/', [Aicha::class, 'index'])->name('index');

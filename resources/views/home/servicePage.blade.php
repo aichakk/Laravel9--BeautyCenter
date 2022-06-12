@@ -45,15 +45,22 @@
                 @foreach($packagesData as $pd)
 
                     <div class="col-lg-3 col-md-6 mb-5">
-                        <a href="{{route('package',['id'=>$pd->id])}}">
-                             <div class="service-wrap text-center clearfix">
+
+                        <div class="service-wrap text-center clearfix">
                             <div class="uptop">
-                                <img src="{{Storage::url($pd->image)}}" alt="" class="img-responsive img-rounded alignleft">
+                                <img src="{{Storage::url($pd->image)}}" alt=""
+                                     class="img-responsive img-rounded alignleft">
                             </div>
                             <h4>{{$pd->type}}</h4>
-                            <p>lick for more details...</p>
+                            <h4>{{$pd->price}}</h4>
+                            <a href="{{route('package',['id'=>$pd->id])}}">
+                                <p>MORE DETAILS</p>
+                            </a>
+                            <a href="{{route('appointment',['id'=>$pd->id])}}">
+                                <p>MAKE AN APPOINTMENT</p>
+                            </a>
                         </div><!-- end issue -->
-                        </a>
+
                     </div><!-- end col -->
                 @endforeach
             </div>
