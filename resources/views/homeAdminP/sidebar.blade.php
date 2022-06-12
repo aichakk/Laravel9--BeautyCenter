@@ -14,7 +14,8 @@
     <div class="collapse navbar-collapse w-auto ps ps--active-x ps--active-y" id="sidenav-collapse-main">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link text-white active bg-gradient-primary" href="/admin/">
+                <a class="nav-link text-white  {{ request()->is('admin') ? 'bg-gradient-primary' : '' }}"
+                   href="/admin/">
                     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                         <i class="material-icons opacity-10">dashboard</i>
                     </div>
@@ -22,7 +23,8 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white " href="/admin/category">
+                <a class="nav-link text-white {{ request()->is('admin/service') ? 'bg-gradient-primary' : '' }}"
+                   href="/admin/service">
                     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                         <i class="material-icons opacity-10">table_view</i>
                     </div>
@@ -30,7 +32,8 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white " href="/admin/user">
+                <a class="nav-link text-white {{ request()->is('admin/user') ? 'bg-gradient-primary' : '' }}"
+                   href="/admin/user">
                     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                         <i class="fas fa-user opacity-10"></i>
                     </div>
@@ -39,7 +42,8 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link text-white " href="/admin/message">
+                <a class="nav-link text-white {{ request()->is('admin/message') ? 'bg-gradient-primary' : '' }}"
+                   href="/admin/message">
                     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                         <i class="fas fa-comment opacity-10"></i>
                     </div>
@@ -47,7 +51,8 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white " href="/admin/question">
+                <a class="nav-link text-white {{ request()->is('admin/faq') ? 'bg-gradient-primary' : '' }}"
+                   href="/admin/faq">
                     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                         <i class="fas fa-question opacity-10"></i>
                     </div>

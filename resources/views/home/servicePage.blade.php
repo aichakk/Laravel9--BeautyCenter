@@ -1,7 +1,7 @@
 @extends('layouts.front-base')
 
 @section('title', 'services')
-
+@include('home.header')
 @section('content')
 <!-- Page Content -->
 <div id="page-content-wrapper">

@@ -2,7 +2,7 @@
 @extends('layouts.front-base')
 
 @section('title', 'User Login')
-
+@include('home.header')
 @section('content')
 
     <!-- Page Content -->

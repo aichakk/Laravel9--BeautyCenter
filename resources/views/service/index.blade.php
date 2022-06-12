@@ -21,16 +21,13 @@
                                     Service-Type
                                 </th>
                                 <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                    Parent_id
+                                    Service-Image
                                 </th>
                                 <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                     Image-Gallery
                                 </th>
                                 <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                     Price
-                                </th>
-                                <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                    Image
                                 </th>
                                 <th class="text-secondary opacity-7"></th>
                                 <th class="text-secondary opacity-7"></th>
@@ -60,10 +57,6 @@
                                             <img class="avatar avatar-sm me-3"
                                                  src="{{asset('assets')}}/images/imagegalary.png" alt="Image">
                                         </a>
-                                    </td>
-                                    <td class="align-middle text-center">
-                                        <span
-                                            class="text-secondary text-xs font-weight-normal">{{$rs->parent_id}}</span>
                                     </td>
                                     <td class="align-middle text-center">
                                         <span class="text-secondary text-xs font-weight-normal">{{$rs->price}}</span>
