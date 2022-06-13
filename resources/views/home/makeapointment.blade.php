@@ -156,8 +156,9 @@
                                     {{--                    //if we are log in we can log out,we are already a register--}}
 
                                     @guest()
-                                        <a href="/register" class="nav-item nav-link">Please login then send</a>
-                                    @endguest
+                                        <a href="/register" class="nav-item nav-link">Please register first then
+                                            send</a>
+                                        @endguest
                                 </div>
                             </fieldset>
                         </form>
