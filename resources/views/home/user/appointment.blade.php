@@ -38,7 +38,10 @@
                                         </th>
 
                                         <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                            apointmen-day
+                                            apointment-day
+                                        </th>
+                                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                            apointment-price
                                         </th>
 
 
@@ -62,6 +65,10 @@
                                             <td class="align-middle text-center">
                                                 <span
                                                     class="text-secondary text-xs font-weight-bold">{{$rs->date}}</span>
+                                            </td>
+                                            <td class="align-middle text-center">
+                                                <span
+                                                    class="text-secondary text-xs font-weight-bold">{{$rs->service->price}}</span>
                                             </td>
 
 
