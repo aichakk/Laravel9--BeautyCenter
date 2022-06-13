@@ -85,6 +85,11 @@
                                                placeholder="status">
                                     </div>
                                     <div class="form-group">
+                                        <input type="text" class="form-control form-control-alternative"
+                                               id="exampleFormControlInput1" name="image"
+                                               placeholder="image">
+                                    </div>
+                                    <div class="form-group">
                                         <label style="color: white;font-size: medium">icon</label>
                                         <input type="file" class="form-control form-control-alternative"
                                                id="exampleFormControlInput1" name="icon"
