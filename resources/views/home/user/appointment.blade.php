@@ -70,6 +70,9 @@
                                                 <span
                                                     class="text-secondary text-xs font-weight-bold">{{$rs->service->price}}</span>
                                             </td>
+                                            <td><a href="{{route('apointments.destroy',['id'=>$rs->id])}}"
+                                                   onclick="return confirm('Deleting! are you sure?')"
+                                                   class="btn btn-block btn-danger btn-sm"> Delete </a></td>
 
 
 
