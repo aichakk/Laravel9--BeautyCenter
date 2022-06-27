@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Category;
+use App\Models\Faq;
 use Illuminate\Http\Request;
 use App\Models\Service;
 use App\Models\Comment;
@@ -23,6 +24,7 @@ class AichaController extends Controller
             'packagesData' => $packagesData
         ]);
     }
+
     public function services()
     {
         $sliderData = Service::limit(3)->get();
@@ -32,6 +34,19 @@ class AichaController extends Controller
             'packagesData' => $packagesData
         ]);
     }
+
+    // faq home controller
+
+    public function faq()
+    {
+        $setting = Setting::first();
+        $datalist = Faq::all();
+        return view("home.faq", [
+            'setting' => $setting,
+            'datalist' => $datalist
+        ]);
+    }
+
 
     //    this is just for a service
 

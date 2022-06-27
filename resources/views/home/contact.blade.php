@@ -6,32 +6,6 @@
 @section('icon', 'BeautyCenter-icon')
 @include('home.header')
 @section('content')
-    <!-- Page Content -->
-    <div id="page-content-wrapper">
-        <div class="all-page-bar">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-12">
-                        <div class="title title-1 text-center">
-                            <div class="much">
-                                <img src="{{asset('assets')}}/uploads/mustache.png" alt=""/>
-                            </div>
-
-                            <div class="title--heading">
-                                <h1>Contact</h1>
-                            </div>
-                            <div class="clearfix"></div>
-
-                            <ol class="breadcrumb">
-                                <li><a href="{{route('home')}}">Home</a></li>
-                                <li class="active">Contact</li>
-                            </ol>
-                        </div>
-                        <!-- .title end -->
-                    </div>
-                </div>
-            </div>
-        </div><!-- end all-page-bar -->
 
         <div id="contact" class="section wb">
             <div class="container">
@@ -87,6 +61,7 @@
                                         @endguest
                                     </div>
                         </div>
+
                         </fieldset>
                         </form>
                     </div>

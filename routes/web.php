@@ -55,6 +55,8 @@ Route::middleware([
 Route::get('/', [AichaController::class, 'index'])->name('home');
 //this is my package route
 Route::get('/package/{id}', [AichaController::class, 'package'])->name('package');
+// faq router
+Route::get('/faq', [AichaController::class, 'faq'])->name('faq');
 
 //for apointment
 Route::get('/appointment/{id}', [AichaController::class, 'appointment'])->name('appointment');

@@ -1,60 +1,140 @@
+<style>
+    .main {
+        width: 55vw;
+        background: inherit;
+        margin: auto;
+        position: relative;
+        top: 8vh;
+        height: auto;
+        padding: 2vw;
+        padding-top: 5vw;
+        padding-bottom: 10vw;
+    }
+
+    body {
+        background-color: grey;
+        font-family: 'Titillium Web', sans-serif;
+    }
+
+    .sec {
+        font-size: 1.5vw;
+        width: 100%;
+        background-color: orange;
+        padding: 1.5vw;
+        cursor: pointer;
+        margin-top: 0.5vw;
+        background-color: #eeeeee;
+        text-align: left;
+        color: black;
+    }
+
+    .sec:hover {
+        width: 110%;
+        padding: 2vw;
+        animation-name: rotate;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+    }
+
+
+    .fa {
+        float: right;
+    }
+
+    .collapsable {
+        width: 100%;
+        background-color: pink;
+        padding: 2vw;
+        font-size: 1.2vw;
+        display: none;
+        color: #757575;
+        background-color: white;
+    }
+
+    .sec i {
+        font-size: 2vw;
+        color: #616161;
+    }
+
+    @media only screen and (max-width: 425px) {
+        .main {
+            width: 90vw;
+        }
+
+        .sec {
+            font-size: 4.5vw;
+            width: 100%;
+            padding: 4.5vw;
+            margin-top: 1.5vw;
+        }
+
+        .sec:hover {
+            width: 110%;
+            padding: 6vw;
+        }
+
+        .collapsable {
+            width: 100%;
+            padding: 6vw;
+            font-size: 3.6vw;
+            display: none;
+        }
+
+        .sec i {
+            font-size: 6vw;
+        }
+    }
+</style>
+
 @extends('layouts.front-base')
 
-@section('title', $setting->title )
-@section('description', $setting->description)
-@section('keywords', $setting->keywords)
-@section('icon', 'Beuaty-Center icon')
-
-@section('content')
-    <!-- Page Content -->
-    <div id="page-content-wrapper">
-        <div class="all-page-bar">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-12">
-                        <div class="title title-1 text-center">
-                            <div class="much">
-                                <img src="{{asset('assets')}}/uploads/mustache.png" alt=""/>
-                            </div>
-
-                            <div class="title--heading">
-                                <h1>About</h1>
-                            </div>
-                            <div class="clearfix"></div>
-
-                            <ol class="breadcrumb">
-                                <li><a href="{{route('home')}}">faq</a></li>
-                                <li class="active">faq</li>
-                            </ol>
-                        </div>
-                        <!-- .title end -->
-                    </div>
-                </div>
-            </div>
-        </div><!-- end all-page-bar -->
-    </div>
-
-    {{--    <div class="container-fluid page-header mb-5">--}}
-    {{--        <div class="d-flex flex-column align-items-center justify-content-center pt-0 pt-lg-5"--}}
-    {{--             style="min-height: 400px">--}}
-    {{--            <h4 class="display-4 mb-3 mt-0 mt-lg-5 text-white text-uppercase font-weight-bold">faq</h4>--}}
-    {{--            <div class="d-inline-flex">--}}
-    {{--                <p class="m-0 text-white"><a class="text-white" href="">Home</a></p>--}}
-    {{--                <p class="m-0 text-white px-2">/</p>--}}
-    {{--                <p class="m-0 text-white">faq</p>--}}
-    {{--            </div>--}}
-    {{--        </div>--}}
-    {{--    </div>--}}
-
-    {{--    <!-- faq Start -->--}}
-    {{--    <div class="container py-5">--}}
-    {{--        <div class="row align-items-center">--}}
-    {{--            {!! $setting->faq !!}--}}
-    {{--        </div>--}}
-    {{--    </div>--}}
-    {{--    <!-- faq End -->--}}
+@section('head')
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".sec").click(function () {
+                $(this).next(".collapsable").slideToggle();
 
 
+            });
 
+            $(".sec").mouseenter(function () {
+                $(this).addClass("z-depth-4");
+                $(this).next(".collapsable").css({"width": "110%"});
+            });
+            $(".sec").mouseleave(function () {
+                $(this).removeClass("z-depth-4");
+                $(this).next(".collapsable").css({"width": "100%"});
+            });
+
+        });
+    </script>
 
 @endsection
+
+@include('home.header')
+@section('content')
+    <!-- Page Header Start -->
+
+
+    <div class="team">
+        <div class="container">
+            <div class="section-header text-center">
+                <h1 class="bg-dark">Frequently Asked Questions</h1>
+            </div>
+            <div class="accordian">
+                @foreach($datalist as $rs)
+                    <div class="sec">
+                        <span class="section">{{$rs->question}}</span>
+                    </div>
+                    <div id="colp1" class="collapsable">
+                        {!! $rs->answer !!}
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </div>
+    </div>
+@endsection
+
