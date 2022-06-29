@@ -18,9 +18,10 @@
 
     .sec {
         font-size: 1.5vw;
-        width: 100%;
+        width: 60%;
         background-color: orange;
         padding: 1.5vw;
+        height: 20%;
         cursor: pointer;
         margin-top: 0.5vw;
         background-color: #eeeeee;
@@ -29,7 +30,7 @@
     }
 
     .sec:hover {
-        width: 110%;
+        width: 100%;
         padding: 2vw;
         animation-name: rotate;
         animation-duration: 1s;
@@ -121,7 +122,7 @@
     <div class="team">
         <div class="container">
             <div class="section-header text-center">
-                <h1 class="bg-dark">Frequently Asked Questions</h1>
+                <h1 style="background-color: hotpink">Frequently Asked Questions</h1>
             </div>
             <div class="accordian">
                 @foreach($datalist as $rs)

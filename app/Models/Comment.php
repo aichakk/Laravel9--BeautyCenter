@@ -7,5 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Comment extends Model
 {
+    public function service()
+    {
+        return $this->belongsTo(Service::class, 'user_id');
+    }
+
     use HasFactory;
 }

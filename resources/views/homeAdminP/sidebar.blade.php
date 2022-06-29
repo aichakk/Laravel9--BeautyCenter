@@ -32,6 +32,24 @@
                 </a>
             </li>
             <li class="nav-item">
+                <a class="nav-link text-white {{ request()->is('admin/order') ? 'bg-gradient-primary' : '' }}"
+                   href="/admin/order">
+                    <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                        <i class="fa-solid fa-calendar-check"></i>
+                    </div>
+                    <span class="nav-link-text ms-1">Appointments</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white {{ request()->is('admin/settings') ? 'bg-gradient-primary' : '' }}"
+                   href="/admin/settings">
+                    <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                    </div>
+                    <span class="nav-link-text ms-1">Settings</span>
+                </a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link text-white {{ request()->is('admin/category') ? 'bg-gradient-primary' : '' }}"
                    href="/admin/category">
                     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">

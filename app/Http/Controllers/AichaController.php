@@ -14,14 +14,23 @@ use Illuminate\Support\Facades\DB;
 
 class AichaController extends Controller
 {
+    public static function mainMenuList()
+    {
+        return Category::where('parent_id', '=', 0)->with('children')->get();
+    }
+
     //my functiontion executions are here!.
     public function index()
     {
         $sliderData = Service::limit(3)->get();
         $packagesData = Service::limit(3)->get();
+        $datalist = Faq::all();
         return view("home.index", [
             'sliderData' => $sliderData,
-            'packagesData' => $packagesData
+            'packagesData' => $packagesData,
+            'datalist' => $datalist
+
+
         ]);
     }
 

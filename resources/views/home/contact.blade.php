@@ -18,6 +18,9 @@
 
                 <div class="row">
                     <div class="col-md-8 offset-md-2">
+                        {!! $setting->contact !!}
+                    </div>
+                    <div class="col-md-8 offset-md-2">
                         <div class="contact_form">
                             <div id="message"></div>
                             <h2>@include('home.message')</h2>

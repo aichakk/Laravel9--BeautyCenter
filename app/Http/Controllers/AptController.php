@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Appointment;
-use App\Models\Category;
+
 use App\Models\Service;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
@@ -28,8 +28,10 @@ class AptController extends Controller
         //
 
         $data = Appointment::where('user_id', Auth::id())->get();
+        $data2 = Service::where('user_id', Auth::id())->get();
         return view('home.user.appointment', [
-            'data' => $data
+            'data' => $data,
+            'data2' => $data2
         ]);
     }
 

@@ -1,7 +1,118 @@
 @extends('layouts.front-base')
 
-@section('title', 'BeautyCenter')
+<style>
+    .main {
+        width: 55vw;
+        background: inherit;
+        margin: auto;
+        position: relative;
+        top: 8vh;
+        height: auto;
+        padding: 2vw;
+        padding-top: 5vw;
+        padding-bottom: 10vw;
+    }
 
+    body {
+        background-color: grey;
+        font-family: 'Titillium Web', sans-serif;
+    }
+
+    .sec {
+        font-size: 1.5vw;
+        width: 60%;
+        background-color: orange;
+        padding: 1.5vw;
+        height: 20%;
+        cursor: pointer;
+        margin-top: 0.5vw;
+        background-color: #eeeeee;
+        text-align: left;
+        color: black;
+    }
+
+    .sec:hover {
+        width: 100%;
+        padding: 2vw;
+        animation-name: rotate;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+    }
+
+
+    .fa {
+        float: right;
+    }
+
+    .collapsable {
+        width: 100%;
+        background-color: pink;
+        padding: 2vw;
+        font-size: 1.2vw;
+        display: none;
+        color: #757575;
+        background-color: white;
+    }
+
+    .sec i {
+        font-size: 2vw;
+        color: #616161;
+    }
+
+    @media only screen and (max-width: 425px) {
+        .main {
+            width: 90vw;
+        }
+
+        .sec {
+            font-size: 4.5vw;
+            width: 100%;
+            padding: 4.5vw;
+            margin-top: 1.5vw;
+        }
+
+        .sec:hover {
+            width: 110%;
+            padding: 6vw;
+        }
+
+        .collapsable {
+            width: 100%;
+            padding: 6vw;
+            font-size: 3.6vw;
+            display: none;
+        }
+
+        .sec i {
+            font-size: 6vw;
+        }
+    }
+</style>
+@section('title', 'BeautyCenter')
+@section('head')
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".sec").click(function () {
+                $(this).next(".collapsable").slideToggle();
+
+
+            });
+
+            $(".sec").mouseenter(function () {
+                $(this).addClass("z-depth-4");
+                $(this).next(".collapsable").css({"width": "110%"});
+            });
+            $(".sec").mouseleave(function () {
+                $(this).removeClass("z-depth-4");
+                $(this).next(".collapsable").css({"width": "100%"});
+            });
+
+        });
+    </script>
+
+@endsection
 @include('home.header')
 @section('content')
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -70,6 +181,9 @@
 
     <!-- Page Content -->
     <div id="page-content-wrapper" class="container">
+        <h1 style="background-color: hotpink">
+            Our services
+        </h1>
 
         <div class="row">
             @foreach($packagesData as $pd)
@@ -105,25 +219,40 @@
             </div><!-- end container -->
         </div><!-- end section -->
 
-
-        <div class="copyrights">
+        <div class="team">
             <div class="container">
-                <div class="footer-distributed">
-                    <div class="footer-left">
-                        <p class="footer-links">
-                            <a href="{{route('home')}}">Home</a>
-                            <a href="{{route('services')}}">Our services</a>
-                            <a href="{{route('about')}}">About us</a>
-                            <a href="{{route('about')}}">Appointment</a>
-                            <a href="#">About</a>
-                            <a href="#">Faq</a>
-                            <a href="#">Contact</a>
-                        </p>
-                        <p class="footer-company-name">All Rights Reserved. &copy; 2018 <a href="#">StyleBarber</a>
-                            Design By : <a href="https://html.design/">html design</a></p>
-                    </div>
+                <div class="section-header text-center">
+                    <h1 style="background-color: hotpink">Frequently Asked Questions</h1>
                 </div>
-            </div><!-- end container -->
-        </div><!-- end copyrights -->
+                <div class="accordian">
+                    @foreach($datalist as $rs)
+                        <div class="sec">
+                            <span class="section">{{$rs->question}}</span>
+                        </div>
+                        <div id="colp1" class="collapsable">
+                            {!! $rs->answer !!}
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="copyrights">
+        <div class="container">
+            <div class="footer-distributed">
+                <div class="footer-left">
+                    <p class="footer-links">
+                        <a href="{{route('home')}}">Home</a>
+                        <a href="{{route('about')}}">About us</a>
+                        <a href="{{route('contact')}}">Contact</a>
+                        <a href="{{route('references')}}">References</a>
+                    </p>
+                    <p class="footer-company-name">All Rights Reserved. &copy; 2018 <a href="#">StyleBarber</a>
+                        Design By : <a href="https://html.design/">html design</a></p>
+                </div>
+            </div>
+        </div><!-- end container -->
+    </div><!-- end copyrights -->
     </div>
 @endsection

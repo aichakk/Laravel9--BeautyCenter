@@ -18,8 +18,10 @@ return new class extends Migration {
             $table->integer('product_id');
             $table->integer('quantity');
             $table->string('date');
-            $table->string('aptmessage');
-            $table->String('yourphone');
+            $table->string('aptmessage')->nullable();
+            $table->string('yourphone');
+            $table->string('note', 150)->nullable();//newly added even in db
+            $table->string('status', 30)->default('new');//newly added even in db
             $table->timestamps();
         });
     }

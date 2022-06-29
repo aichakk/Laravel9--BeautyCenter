@@ -13,14 +13,14 @@
             <!-- About Start -->
             <div class="container py-5">
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <h4 class="display-4 mb-3 mt-0 mt-lg-5 text-black text-uppercase font-weight-bold">My
                             Dashboard</h4>
                         <hr style="color: black">
                         @include('home.user.menu')
 
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-8">
                         <h5 class="display-4 mb-3 mt-0 mt-lg-5 text-black-50 text-uppercase font-weight-bold">My
                             Appointment</h5>
                         <hr>
@@ -43,11 +43,14 @@
                                         <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                             apointment-price
                                         </th>
+                                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+
+                                            status
+                                        </th>
 
 
                                         <th class="text-secondary opacity-7"></th>
-                                        <th class="text-secondary opacity-7"></th>
-                                        <th class="text-secondary opacity-7"></th>
+
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -55,7 +58,8 @@
                                         <tr>
 
                                             <td class="align-middle text-center">
-                                                <span class="text-secondary text-xs font-weight-bold">{{$rs->id}}</span>
+                                                <span
+                                                    class="text-secondary text-xs font-weight-bold">{{$rs->service->type}}</span>
                                             </td>
 
                                             <td class="align-middle text-center">
@@ -69,6 +73,10 @@
                                             <td class="align-middle text-center">
                                                 <span
                                                     class="text-secondary text-xs font-weight-bold">{{$rs->service->price}}</span>
+                                            </td>
+                                            <td class="align-middle text-center">
+                                                <span
+                                                    class="text-secondary text-xs font-weight-bold">{{$rs->status}}</span>
                                             </td>
                                             <td><a href="{{route('apointments.destroy',['id'=>$rs->id])}}"
                                                    onclick="return confirm('Deleting! are you sure?')"

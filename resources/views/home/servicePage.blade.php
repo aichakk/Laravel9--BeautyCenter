@@ -73,13 +73,13 @@
                 <div class="footer-left">
                     <p class="footer-links">
                         <a href="{{route('home')}}">Home</a>
-                        <a href="#">Blog</a>
-                        <a href="#">Pricing</a>
-                        <a href="#">About</a>
-                        <a href="#">Faq</a>
-                        <a href="#">Contact</a>
+                        <a href="{{route('home')}}">About</a>
+                        <a href="{{route('faq')}}">FAQ</a>
+                        <a href="{{route('contact')}}">Contact</a>
+                        <a href="{{route('references')}}">References</a>
                     </p>
-                    <p class="footer-company-name">All Rights Reserved. &copy; 2018 <a href="#">StyleBarber</a> Design By : <a href="https://html.design/">html design</a></p>
+                    <p class="footer-company-name">All Rights Reserved. &copy; 2018 <a href="#">StyleBarber</a> Design
+                        By : <a href="https://html.design/">html design</a></p>
                 </div>
             </div>
         </div><!-- end container -->

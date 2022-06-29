@@ -1,16 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\AdminPanel;
 
-use App\Models\Appointment;
-use App\Models\Service;
-
-use App\Models\Comment;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Storage;
+use App\Models\Order;
+use App\Models\Appointment;
 
-class userController extends Controller
+class OrderController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -19,25 +16,12 @@ class userController extends Controller
      */
     public function index()
     {
-        return view('home.user.index');
-    }
-
-    public function reviews()
-    {
-        $comments = Comment::where('user_id', '=', Auth::id())->get();
-        return view('home.user.comments', [
-            'comments' => $comments
+        $data = Appointment::All();
+//             dd($data);
+        return view('homeAdminP.order.index', [
+            'data' => $data
         ]);
     }
-
-    public function appointmentas()
-    {
-        $appointData = Appointment::where('user_id', '=', Auth::id())->get();
-        return view('home.user.appointment', [
-            'appointData' => $appointData
-        ]);
-    }
-
 
     /**
      * Show the form for creating a new resource.
@@ -46,7 +30,7 @@ class userController extends Controller
      */
     public function create()
     {
-
+        //
     }
 
     /**
@@ -68,7 +52,13 @@ class userController extends Controller
      */
     public function show($id)
     {
-        //
+        $data = Appointment::find($id);
+        $datalist = Appointment::where('user_id', $id)->get();
+        //dd($data);
+        return view('homeAdminP.order.show', [
+            'data' => $data,
+            'datalist' => $datalist,
+        ]);
     }
 
     /**
@@ -79,7 +69,7 @@ class userController extends Controller
      */
     public function edit($id)
     {
-        //
+
     }
 
     /**
@@ -91,7 +81,36 @@ class userController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = Appointment::find($id);
+        $data->status = $request->status;
+        $data->note = $request->note;
+        $data->save();
+        return redirect()->back();
+    }
+
+    public function cancelorder($id)
+    {
+        $data = Appointment::find($id);
+        $data->status = 'cancelled';
+        $data->save();
+        return redirect()->back();
+    }
+
+    public function cancelproduct($id)
+    {
+        $data = Appointment::find($id);
+        $data->status = 'cancelled';
+        $data->save();
+        return redirect()->back();
+    }
+
+
+    public function acceptproduct($id)
+    {
+        $data = Appointment::find($id);
+        $data->status = 'Accepted';
+        $data->save();
+        return redirect()->back();
     }
 
     /**
@@ -103,13 +122,5 @@ class userController extends Controller
     public function destroy($id)
     {
         //
-    }
-
-    public function reviewdestroy($id)
-    {
-        $data = Comment::find($id);
-        $data->delete();
-        return redirect('userpanel.reviews');
-
     }
 }

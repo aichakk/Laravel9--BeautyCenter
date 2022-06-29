@@ -65,6 +65,8 @@ Route::get('/appointment/{id}', [AichaController::class, 'appointment'])->name('
 Route::get('/services', [AichaController::class, 'services'])->name('services');
 // this is for the review part
 Route::post('/storecomment', [AichaController::class, 'storecomment'])->name('storecomment');
+// route category
+//Route::get('/menucontents/{id}/{slug}', [AichaController::class, 'menucontents'])->name('menucontents');
 
 // this is the contact page home settings......
 Route::get('/contact', [AichaController::class, 'contact'])->name('contact');
@@ -278,7 +280,29 @@ Route::middleware('auth')->group(function () {
         Route::post('/addrole/{id}', 'addrole')->name('addrole');
     });
 
-});
+        //Admin Order Route app
+
+        route::prefix('order')->name('order.')->controller(\App\Http\Controllers\AdminPanel\OrderController::class)->group(function () {
+
+
+            route::get('/', 'index')->name('index');
+
+            route::get('/create', 'create')->name('create');
+
+            route::post('/store', 'store')->name('store');
+
+            route::get('/edit/{id}', 'edit')->name('edit');
+
+            route::post('/update/{id}', 'update')->name('update');
+            route::get('/destroy/{id}', 'destroy')->name('destroy');
+            route::get('/show/{id}', 'show')->name('show');
+            route::get('/cancelorder/{id}', 'cancelorder')->name('cancelorder');
+            route::get('/cancelproduct/{id}', 'cancelproduct')->name('cancelproduct');
+            route::get('/acceptproduct/{id}', 'acceptproduct')->name('acceptproduct');
+
+        });
+
+    });
 });
 
 

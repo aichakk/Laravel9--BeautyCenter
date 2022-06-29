@@ -16,22 +16,27 @@
                     <li class="nav-item active" style="background-color: hotpink;"><a class="nav-link"
                                                                                       href="{{route('home')}}">Home</a>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="{{route('services')}}">Our Services</a></li>
+
+                    {{--                    <li class="nav-item">@include('home.sidebar')</li>--}}
                     <li class="nav-item"><a class="nav-link" href="{{route('about')}}">About Us</a></li>
-                    @auth
-                        {{--                    : {{Auth::user()->name}}--}}
-                        <a href="/logoutuser" class="nav-item nav-link">log-out</a>
+                    <li class="nav-item"><a class="nav-link" href="{{route('references')}}">References</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{route('faq')}}">Faq</a></li>
+                    {{--                    @auth--}}
+                    {{--                        --}}{{--                    : {{Auth::user()->name}}--}}
+                    {{--                        <a href="/logoutuser" class="nav-item nav-link">log-out</a>--}}
 
-                    @endauth
-                    {{--                    //if we are log in we can log out,we are already a register--}}
+                    {{--                    @endauth--}}
+                    {{--                    --}}{{--                    //if we are log in we can log out,we are already a register--}}
 
-                    @guest()
-                        <a href="/loginuser" class="nav-item nav-link">Login</a>
-                    @endguest
-{{--                    //else it will be the section of a guest--}}
-                    <li class="nav-item"><a class="nav-link" href="/appointment/1">Appointment</a></li>
+                    {{--                    @guest()--}}
+                    {{--                        <a href="/loginuser" class="nav-item nav-link">Login</a>--}}
+                    {{--                    @endguest--}}
+                    {{--                    //else it will be the section of a guest--}}
+                    {{--                    <li class="nav-item"><a class="nav-link" href="/appointment/1">Appointment</a></li>--}}
                     <li class="nav-item"><a class="nav-link" href="{{route('contact')}}">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/userpanel">dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/userpanel"><i class="fas fas-user"
+                                                                                  aria-hidden="true"></i>dashboard</a>
+                    </li>
                 </ul>
             </div>
         </div>
